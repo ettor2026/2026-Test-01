@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>烟台元宵 AI 猜灯谜与海报工具</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>烟台专属 AI 猜灯谜与海报引流工具</h1>
+      <p class="desc">3天可上线版：批量出灯谜 + 海报提示词 + 转化文案</p>
+
+      <section class="card">
+        <h2>1) 灯谜生成</h2>
+        <div class="grid">
+          <label>主题
+            <select id="topic">
+              <option value="mixed">混合</option>
+              <option value="landmark">地标</option>
+              <option value="specialty">特产</option>
+              <option value="dialect">方言</option>
+            </select>
+          </label>
+          <label>数量
+            <input id="count" type="number" value="10" min="1" max="50" />
+          </label>
+          <label>语气
+            <select id="tone">
+              <option value="fun">趣味</option>
+              <option value="poetic">诗意</option>
+            </select>
+          </label>
+        </div>
+        <button id="genRiddles">生成灯谜</button>
+        <pre id="riddleOutput"></pre>
+      </section>
+
+      <section class="card">
+        <h2>2) 海报提示词 + 引流文案</h2>
+        <div class="grid">
+          <label>风格
+            <select id="style">
+              <option value="new_chinese">新中式</option>
+              <option value="cyberpunk">赛博朋克</option>
+            </select>
+          </label>
+          <label>主视觉
+            <input id="visual" value="养马岛海岸线与灯笼" />
+          </label>
+          <label>色调
+            <input id="palette" value="朱红+鎏金" />
+          </label>
+        </div>
+        <button id="genPoster">生成海报文案包</button>
+        <pre id="posterOutput"></pre>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
